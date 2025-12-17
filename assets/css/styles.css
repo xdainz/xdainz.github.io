@@ -1,0 +1,94 @@
+:root {
+    --bg: #fdfdfd;
+    --text: #333;
+    --text-mutted: #777;
+    --primary: #992cff;
+    --highlight: #c086f7;
+}
+
+html {
+    background: #e7e7e7;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    margin: 1rem auto;
+    padding: 0.2rem 2rem;
+    font-family: "Open Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-weight: 500;
+    border-radius: 0.2rem;
+}
+
+.muted {
+    color: var(--text-mutted) !important;
+    cursor: default;
+    font-weight: 500;
+}
+
+li::marker {
+    color: var(--primary);
+}
+
+li,
+p {
+    margin-left: 2rem;
+}
+
+ul,
+li {
+    margin-left: 0;
+}
+
+a {
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--highlight);
+}
+
+.button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    margin-left: 2rem;
+    font-weight: bold;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.button:hover {
+    color: white;
+    background: var(--highlight);
+    text-decoration: none;
+}
+
+.button:active {
+    background: white;
+    color: var(--primary);
+    border: 1px solid;
+    border-color: var(--primary);
+}
+
+@media (max-width: 1200px) {
+    body {
+        margin: auto;
+    }
+
+    li,
+    p {
+        margin-left: 0;
+    }
+
+    .button {
+        margin-left: 0;
+    }
+}
