@@ -2,8 +2,8 @@
     --bg: #fdfdfd;
     --text: #333;
     --text-mutted: #777;
-    --primary: #992cff;
-    --highlight: #c086f7;
+    --primary: #7023b8;
+    --highlight: #d621ff;
 }
 
 html {
@@ -39,7 +39,7 @@ p {
 
 ul,
 li {
-    margin-left: 0;
+    margin-left: 0.5rem;
 }
 
 a {
