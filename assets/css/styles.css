@@ -1,45 +1,28 @@
-:root {
-    --bg: #fdfdfd;
-    --text: #333;
-    --text-mutted: #777;
-    --primary: #7023b8;
-    --highlight: #d621ff;
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
-    background: #e7e7e7;
+    background: var(--html-bg);
 }
 
 body {
     max-width: 800px;
-    margin: auto;
     margin: 1rem auto;
     padding: 0.2rem 2rem;
-    font-family: "Open Sans", sans-serif;
-    background: var(--bg);
+    font-family: var(--font);
     color: var(--text);
     font-weight: 500;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
 }
 
 .muted {
     color: var(--text-mutted) !important;
     cursor: default;
     font-weight: 500;
-}
-
-li::marker {
-    color: var(--primary);
-}
-
-li,
-p {
-    margin-left: 2rem;
-}
-
-ul,
-li {
-    margin-left: 0.5rem;
 }
 
 a {
@@ -54,41 +37,93 @@ a:hover {
     color: var(--highlight);
 }
 
-.button {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.2rem;
-    margin-left: 2rem;
-    font-weight: bold;
-    transition: background-color 0.15s ease-in-out;
+.grid {
+    display: flex;
+    gap: 1.5rem;
 }
 
-.button:hover {
-    color: white;
-    background: var(--highlight);
-    text-decoration: none;
-}
-
-.button:active {
-    background: white;
-    color: var(--primary);
-    border: 1px solid;
-    border-color: var(--primary);
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
     body {
         margin: auto;
     }
 
-    li,
-    p {
-        margin-left: 0;
+    .grid {
+        display: block;
+    }
+}
+
+.text-box {
+    border: 2px solid;
+    margin: 1.5rem 0 0 0;
+    padding: 0rem 2rem 0rem 2rem;
+    border-radius: 0.5rem;
+    background: var(--bg);
+}
+
+.tag {
+    border: 2px solid var(--primary);
+    background: var(--tag-bg);
+    border-radius: 1rem;
+    padding: 0.1rem 0.9rem;
+    font-size: 0.8rem;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.tag:hover {
+    background: var(--tag-bg-hover);
+    cursor: default;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.contact-list {
+    font-size: 0.9rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.project {
+    font-size: 0.9rem;
+    transition: background-color 0.15s ease-in-out;
+
+    a {
+        font-weight: lighter;
+    }
+}
+
+.project:hover {
+    background: var(--project-bg-hover);
+}
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-list {
+    font-size: 0.9rem;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        background: var(--bg);
+        transition: color 0.15s ease-in-out;
+        cursor: default;
     }
 
-    .button {
-        margin-left: 0;
+    li:hover {
+        background: var(--project-bg-hover);
     }
+    a {
+        color: var(--text);
+    }
+}
+
+.text-primary {
+    color: var(--primary);
 }

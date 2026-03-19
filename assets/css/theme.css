@@ -1,0 +1,12 @@
+:root {
+    --bg: #222;
+    --html-bg: #111;
+    --text: #fffffc;
+    --text-mutted: #b9b9b9;
+    --primary: #e03189;
+    --highlight: #fc74ea;
+    --tag-bg: #111;
+    --tag-bg-hover: #85035e;
+    --project-bg-hover: #333;
+    --font: "Monda", sans-serif;
+}
